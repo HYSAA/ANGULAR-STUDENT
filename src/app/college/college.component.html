@@ -1,0 +1,73 @@
+<div id="data-entry">
+    <button  routerLink="" class="button btn-secondary" >
+        Add Student
+    </button>
+    <button  routerLink="/college" class="button btn-secondary" disabled>
+        Add College
+    </button>
+    <button routerLink="/program" class="button btn-secondary">
+        Add Program
+    </button>  
+
+    <table id="table-entry">
+        <tr>
+            <th colspan="2"  [ngStyle]="{'text-align': 'center'}">
+                <span>College Registration</span>
+            </th>
+        </tr>
+        <tr>
+            <th><label for="collId">College ID</label></th>
+            <td><input  [(ngModel)]="collid" type="text" name="collId"></td>
+        </tr>
+        <tr>
+            <th><label for="collFName">College Full Name</label></th>
+            <td><input  [(ngModel)]="collfullname" type="text" name="collFName"></td>
+        </tr>
+
+        <tr>
+            <th><label for="collSName">College Short Name</label></th>
+            <td><input  [(ngModel)]="collshortname" type="text" name="collSName"></td>
+        </tr>
+    
+        <tr>
+            <td colspan="1" [ngStyle]="{'text-align': 'center'}">
+            <button (click)="saveCollegeInfo()" class="button btn-primary">
+                Save
+            </button>  
+            <button (click)="printCollegeEntries()" *ngIf="colleges.length > 0"  class="button btn-primary">
+                Print
+            </button>    
+            
+            <button (click)="clearEntries()"   class="button btn-primary">
+                Clear Entry
+            </button> 
+            <button (click)="updateCollegeInfo()" *ngIf="edit"  class="button btn-primary">
+                Update
+            </button>    
+        </tr>
+    </table>
+
+    <table *ngIf="printable" id="table-listing">
+        <thead>
+        <tr>
+            <th>College ID</th>
+            <th>College Full Name</th>
+            <th>College Short Name</th>
+            <th colspan="2">Edit Delete</th>
+        </tr> 
+        </thead>
+        <tbody>
+        <tr *ngFor="let college of colleges" > 
+            <td>{{ college.collid}}</td>
+            <td>{{ college.collfullname }}</td>
+            <td>{{ college.collshortname }}</td>
+        
+            <!-- <td> <a href="#" (click)="getCollegeInfo(college)">Edit </a></td>
+            <td><a href="#" (click)="removeCollege(college)">Delete</a></td> -->
+
+            <td> <a (click)="getCollegeInfo(college)">Edit </a></td>
+            <td><a (click)="removeCollege(college)">Delete</a></td>
+        </tr>
+        </tbody>
+    </table>  
+</div>

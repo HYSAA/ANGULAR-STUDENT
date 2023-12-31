@@ -1,0 +1,99 @@
+<div id="data-entry">
+    <button  routerLink="" class="button btn-secondary" >
+        Add Student
+    </button>
+    <button  routerLink="/college" class="button btn-secondary">
+        Add College
+    </button>
+    <button routerLink="/program" class="button btn-secondary" disabled>
+        Add Program
+    </button>  
+    <table id="table-entry">
+        <tr>
+            <th colspan="2"  [ngStyle]="{'text-align': 'center'}">
+                <span>Program Registration</span>
+            </th>
+        </tr>
+        
+        <tr>      
+            <th><label for="progId">Program ID</label></th>
+            <td>
+                <input type="text" [(ngModel)]="progid"  name="progId" id="progId" >
+            </td>
+        </tr>
+        <tr>
+            <th><label for="progFname">Program Fullname</label></th>
+            <td><input  [(ngModel)]="progfullname" type="text" name="progFname"></td>
+        </tr>
+
+        <tr>
+            <th><label for="progSname">Program Shortname</label></th>
+            <td><input  [(ngModel)]="progshortname" type="text" name="progSname"></td>
+        </tr>
+       
+      
+        <tr>
+            <th><label for="college">College</label></th>
+            <td>
+                <select [(ngModel)]="selectedCollege" name="" id="college"  (change)="filterDepartments()">
+                    <!-- <select [(ngModel)]="selectedCollege" name="" id="college"  > -->
+                    <option [ngValue]="null">----------- Select College -----------</option>
+                    <option *ngFor="let college of colleges" [ngValue]="college">
+                        {{ college.collfullname }}
+                    </option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th><label for="department">Department</label></th>
+            <td>
+                <select [(ngModel)]="selectedDepartment" name="" id="department">
+                    <option [ngValue]="null">----------- Select Department -----------</option>
+                    <option *ngFor="let department of filteredDepartments" [ngValue]="department">
+                        {{ department.deptfullname }}
+                    </option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" >
+                <button (click)="saveProgramInfo()" class="button btn-primary">
+                    Save
+                </button>    
+                <button (click)="printProgramEntries()" *ngIf="programs.length > 0"  class="button btn-primary">
+                    Print
+                 </button>  
+                 <button (click)="updateProgramInfo()" *ngIf="programs.length > 0"  class="button btn-primary">
+                    Update
+                </button>   
+
+        </tr>
+        </table>
+
+        <table *ngIf="printable" id="table-listing">
+            <thead>
+            <tr>
+                <th>Program ID</th>
+                <th>Program Fullname</th>
+                <th>Program Shortname</th>
+                <th>College</th>
+                <!-- <th>Department</th> -->
+                <th colspan="2">Edit Delete</th>
+            </tr> 
+            </thead>
+            <tbody>
+            <tr *ngFor="let program of programs" > 
+                <td>{{ program.progid}}</td>
+                <td>{{ program.progfullname }}</td>
+                <td>{{ program.progshortname }}</td>
+                
+                <td>{{getCollegeName(program.progcollid)}}</td>
+                <!-- <td>{{getDepartmentName(program.progdeptid) }}</td> -->
+
+                <td> <a  (click)="getProgramInfo(program)">Edit </a></td>
+                <td><a  (click)="removeProgram(program)">Delete</a></td>
+            </tr>
+            </tbody>
+        </table>  
+</div> 

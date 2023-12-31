@@ -1,0 +1,116 @@
+div#data-entry {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2.0rem;
+}
+
+table#table-entry {
+    margin: 0 auto;
+}
+
+#table-entry th {
+    text-align: left;
+}
+
+table#table-listing {
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+#table-listing tr:nth-child(2n) {
+    background-color: rgb(220, 220, 220);
+    color:midnightblue;
+}
+
+#table-listing tr > th {
+    background-color: blue;
+    color: white; 
+}
+
+
+input[type=text],input[type=password], select {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2rem;    
+    height: 3rem;
+    width: 35rem;
+    border-radius: 5px;
+}
+
+/* input[type=password]{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2rem;    
+    height: 3rem;
+    width: 35rem;
+    border-radius: 5px;
+} */
+
+input[type=submit]{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2rem;    
+    height: 3rem;
+    width: 10rem;
+    border-radius: 5px;
+    background-color: dodgerblue;
+    color: white; 
+}
+
+input[type=submit]:hover{
+    background-color: midnightblue;
+}
+    
+
+
+
+select {
+    border: 1px solid black;
+}
+
+select option:nth-child(1){
+    text-align: center;
+    font-weight: bold;
+}
+
+option {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2rem;
+}
+
+.button {
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 1.5rem;
+    border: 1px solid transparent;
+    line-height: 1.42857143;
+}
+
+.login{
+    align-content: center;
+    width: 400px;
+}
+
+
+
+.btn-primary {
+    background-color: dodgerblue;
+    color: white;
+}
+
+
+.btn-primary:hover {
+    background-color: skyblue;
+    color: white;
+}
+
+
+
+
+.btn-info {
+    background-color: green;
+    color: white;
+}
+
+.btn-danger {
+    background-color: crimson;
+    color: white;
+}
