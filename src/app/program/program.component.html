@@ -7,7 +7,7 @@
     </button>
     <button routerLink="/program" class="button btn-secondary" disabled>
         Add Program
-    </button>  
+    </button>
     <table id="table-entry">
         <tr>
             <th colspan="2"  [ngStyle]="{'text-align': 'center'}">
@@ -59,15 +59,16 @@
         <tr>
             <td colspan="2" >
                 <button (click)="saveProgramInfo()" class="button btn-primary">
-                    Save
-                </button>    
-                <button (click)="printProgramEntries()" *ngIf="programs.length > 0"  class="button btn-primary">
-                    Print
-                 </button>  
-                 <button (click)="updateProgramInfo()" *ngIf="programs.length > 0"  class="button btn-primary">
-                    Update
-                </button>   
-
+                    <i class="material-icons">save</i> Save
+                </button>
+                
+                <button (click)="printProgramEntries()" *ngIf="programs.length > 0" class="button btn-primary">
+                    <i class="material-icons">print</i> Print
+                </button>
+                
+                <!-- <button (click)="updateProgramInfo()" *ngIf="programs.length > 0" class="button btn-primary">
+                    <i class="material-icons">update</i> Update
+                </button> -->
         </tr>
         </table>
 
@@ -78,7 +79,7 @@
                 <th>Program Fullname</th>
                 <th>Program Shortname</th>
                 <th>College</th>
-                <!-- <th>Department</th> -->
+              
                 <th colspan="2">Edit Delete</th>
             </tr> 
             </thead>
@@ -89,7 +90,7 @@
                 <td>{{ program.progshortname }}</td>
                 
                 <td>{{getCollegeName(program.progcollid)}}</td>
-                <!-- <td>{{getDepartmentName(program.progdeptid) }}</td> -->
+             
 
                 <td> <a  (click)="getProgramInfo(program)">Edit </a></td>
                 <td><a  (click)="removeProgram(program)">Delete</a></td>

@@ -1,72 +1,91 @@
+/* styles.css */
+
+/* Import Google's Material Design icons */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
 /* Global Font Style */
 body {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif; /* Use Roboto font from Google Fonts */
+  font-size: 1.6rem;
 }
 
 /* Common Button Styles */
 .button, input[type=submit] {
-    font-size: 1.8rem;
-    height: 3rem;
-    width: auto;
-    border-radius: 5px;
-    margin: 5px;
-    padding: 6px 12px;
+  font-size: 1.6rem;
+  height: 3rem;
+  width: auto;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #2196F3; /* Material Design primary color */
+  color: white;
 }
 
 .button:hover, input[type=submit]:hover {
-    background-color: midnightblue;
+  background-color: #1565C0; /* Slightly darker shade on hover */
 }
 
 /* Form Label Styling */
 label {
-    font-weight: bold;
-    font-size: 1.8rem;
-    margin-bottom: 5px;
-}
-
-/* Button Container Styling */
-.button-container {
-    display: flex;
-    justify-content: center;
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-bottom: 5px;
 }
 
 /* Table Styling */
 table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
 table th, table td {
-    padding: 10px;
-    border: 1px solid #ddd;
+  padding: 10px;
+  border: 1px solid #ddd;
 }
 
 table th {
-    background-color: blue;
-    color: white;
-    text-align: left;
+  background-color: #2196F3; /* Material Design primary color */
+  color: white;
+  text-align: left;
 }
 
 table tr:nth-child(2n) {
-    background-color: rgb(220, 220, 220);
-    color: midnightblue;
+  background-color: #E3F2FD; /* Lighter shade for even rows */
+  color: #2196F3;
 }
 
 /* Input and Select Styling */
 input[type=text], input[type=password], select {
-    font-size: 1.8rem;
-    height: 3rem;
-    width: 100%;
-    border-radius: 5px;
-    margin-bottom: 10px;
+  font-size: 1.6rem;
+  height: 3rem;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  padding: 8px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    /* Adjust styles for smaller screens */
-    /* Example: Hide some elements, reduce font sizes, etc. */
-    input[type=text], input[type=password], select {
-        width: 100%;
-    }
+  /* Adjust styles for smaller screens */
+  input[type=text], input[type=password], select {
+    width: 100%;
+  }
 }
+
+#data-entry {
+    text-align: center;
+    margin-bottom: 20px; /* Adjust the margin as needed */
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .button {
+    margin: 0 10px; /* Adjust the margin as needed */
+  }

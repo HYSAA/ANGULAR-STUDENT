@@ -1,11 +1,18 @@
 div#data-entry {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 2.0rem;
+    text-align: center;
 }
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 table#table-entry {
     margin: 0 auto;
 }
+.table-buttons {
+    margin-top: 20px; /* Add space between the buttons and the table */
+}
+
 
 #table-entry th {
     text-align: left;
@@ -42,6 +49,78 @@ input[type=text],input[type=password], select {
     width: 35rem;
     border-radius: 5px;
 } */
+
+#data-entry {
+    font-family: 'Cambria', 'Cochin', 'Georgia', 'Times', 'Times New Roman', serif;
+    font-size: 2.0rem;
+  }
+  
+  .table-container {
+    margin: 0 auto;
+    width: 80%; /* Adjust the width as needed */
+  }
+  
+  #table-entry th {
+    text-align: left;
+  }
+  
+  input[type="text"],
+  select {
+    font-size: 2rem;
+    height: 3rem;
+    width: 100%; /* Make input fields and select full-width */
+    border-radius: 5px;
+    margin-bottom: 15px; /* Add some space between input fields */
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+  
+  .input-container {
+    margin-bottom: 20px; /* Add space between input fields and buttons */
+  }
+  
+  button {
+    font-size: 1.6rem;
+    height: 3rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary {
+    background-color: dodgerblue;
+    color: white;
+    margin-right: 10px; /* Add space between buttons */
+  }
+  
+  .btn-primary:hover {
+    background-color: midnightblue;
+  }
+  
+  #table-listing {
+    width: 100%;
+    font-size: 1.5rem;
+    margin-top: 20px; /* Add space between the two tables */
+  }
+  
+  #table-listing th {
+    background-color: blue;
+    color: white;
+  }
+  
+  #table-listing tr:nth-child(2n) {
+    background-color: rgb(220, 220, 220);
+    color: midnightblue;
+  }
+  
+  #table-listing tr > th {
+    background-color: blue;
+    color: white;
+  }
+  
+  .table-buttons {
+    text-align: center;
+  }
 
 input[type=submit]{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -82,6 +161,8 @@ option {
     font-size: 1.5rem;
     border: 1px solid transparent;
     line-height: 1.42857143;
+    background-color: #2196F3; /* Material Design primary color */
+    color: white;
 }
 
 .login{

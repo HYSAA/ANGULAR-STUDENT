@@ -1,9 +1,11 @@
-div#data-entry {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 2.0rem;
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+#data-entry {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    text-align: center;
 }
 
-table#table-entry {
+#table-entry {
     margin: 0 auto;
 }
 
@@ -11,99 +13,95 @@ table#table-entry {
     text-align: left;
 }
 
-table#table-listing {
+#table-listing {
     width: 100%;
     font-size: 1.5rem;
+    border-collapse: collapse;
+}
+
+#table-listing th, #table-listing td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+#table-listing th {
+    background-color: blue;
+    color: white;
 }
 
 #table-listing tr:nth-child(2n) {
     background-color: rgb(220, 220, 220);
-    color:midnightblue;
+    color: midnightblue;
 }
 
-#table-listing tr > th {
-    background-color: blue;
-    color: white; 
-}
-
-
-input[type=text],input[type=password], select {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 2rem;    
+input[type=text],
+input[type=password],
+select {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
     height: 3rem;
-    width: 35rem;
+    width: 100%;
+    border: 1px solid #ddd;
     border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 8px;
+    box-sizing: border-box;
 }
 
-/* input[type=password]{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 2rem;    
+input[type=submit] {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
     height: 3rem;
-    width: 35rem;
-    border-radius: 5px;
-} */
-
-input[type=submit]{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 2rem;    
-    height: 3rem;
-    width: 10rem;
+    width: 100%;
     border-radius: 5px;
     background-color: dodgerblue;
-    color: white; 
+    color: white;
+    cursor: pointer;
 }
 
-input[type=submit]:hover{
+input[type=submit]:hover {
     background-color: midnightblue;
 }
-    
-
-
 
 select {
-    border: 1px solid black;
+    height: 3rem;
 }
 
-select option:nth-child(1){
+select option:nth-child(1) {
     text-align: center;
     font-weight: bold;
 }
 
-option {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 2rem;
-}
-
 .button {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin: 5px;
     border-radius: 4px;
     padding: 6px 12px;
     font-size: 1.5rem;
     border: 1px solid transparent;
     line-height: 1.42857143;
+    background-color: #2196F3; /* Material Design primary color */
+    color: white;
 }
 
-.login{
-    align-content: center;
-    width: 400px;
+.btn-primary,
+.btn-info,
+.btn-danger {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
-
-
 
 .btn-primary {
     background-color: dodgerblue;
     color: white;
 }
 
-
 .btn-primary:hover {
     background-color: skyblue;
-    color: white;
 }
-
-
-
 
 .btn-info {
     background-color: green;
